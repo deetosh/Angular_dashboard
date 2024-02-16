@@ -1,0 +1,25 @@
+<div class="edit-schedule-wrapper container has-blurred-white-bg">
+    <h2 class="is-bold">Edit Schedule</h2>
+
+    <p *ngIf="!schedule">Todo not found</p>
+    <div *ngIf="schedule">
+        <h2 class="is-bold">{{ schedule.day }}</h2>
+        <h2 class="is-bold">{{ schedule.time }}</h2>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" >
+        
+        <div class="form-field">
+            <input type="text" class="textbox" [ngModel]="schedule.content" #textField="ngModel" name="text" placeholder="schedule.content" maxlength="20">
+            <ng-container *ngIf="textField.invalid">
+                <p *ngIf="textField.errors['maxlength']">maxlength is 15 characters</p>
+            </ng-container>
+        </div>
+
+        <div class="btns-container">
+            <a routerLink="../" class="btn">Cancel</a>
+            <button class="btn align-end">Save</button>
+        </div>
+    </form>
+</div>
+</div>
+
+

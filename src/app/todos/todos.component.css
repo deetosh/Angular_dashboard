@@ -1,0 +1,37 @@
+.todos-wrapper{
+    height: 100%;
+    overflow-y: auto;
+}
+
+h1{
+    margin-top: -40px;
+    margin-left: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.add-btn{
+    margin-right: 5px;
+    margin-left: -3px;
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns{
+    margin-left:450px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+app-todo-item{
+    display: block;
+}

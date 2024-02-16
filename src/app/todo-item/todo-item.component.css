@@ -1,0 +1,110 @@
+.todo-item{
+    position:relative;
+    display:flex;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 25px;
+    align-items: center;
+    height:100%;
+    min-height: 40px;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow:hidden;
+}
+
+.todo-text{
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.check-box{
+    display:flex;
+    padding: 4px;
+    border:2px solid white;
+    border-radius: 50%;
+    margin-right:15px;
+    margin-left: 15px;
+
+    .material-symbols-outlined{
+        font-size: 18px;
+        opacity: 0;
+    }
+
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+
+.todo-item:hover{
+    .todo-text{
+        color: white;
+    }
+
+    .check-box:hover{
+        border-color: transparent;
+        background-color: rgba(228, 216, 216, 0.63);
+        
+    }
+}
+
+.todo-item.completed{
+    .todo-text{
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: line-through;
+    }
+
+    .check-box{
+        background-color: rgba(22, 241, 26, 0.564);
+        border-color: transparent;
+        .material-symbols-outlined{
+            font-size: 28px;
+            opacity: 1;
+            margin:-3px;
+        }
+    }
+}
+
+.todo-item-action-btn{
+    font-size: 15px;
+    background: transparent;
+    border-radius: 10px;
+    padding: 1px;
+
+    &:hover{
+        background: rgba(225, 210, 210, 0.5);
+    }
+
+    &:first-child{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding-left: 10px;
+    }
+    &:last-child{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-right: 10px;
+    }
+}
+
+.todo-item-actions{
+    position:absolute;
+    right: 5px;
+    z-index: 1;
+
+    background: rgba(109, 105, 105, 0.5);
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+}
+
+.todo-item:hover .todo-item-actions{
+    visibility: visible;
+}
+
+.material-symbols-outlined{
+    color:white;
+}

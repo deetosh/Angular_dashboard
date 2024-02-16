@@ -1,0 +1,13 @@
+.edit-bookmark-wrapper {
+    padding: 35px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.btns{
+    display: flex;
+    gap: 30px;
+}

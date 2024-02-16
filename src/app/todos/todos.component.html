@@ -1,0 +1,28 @@
+<!-- Todos page design  -->
+<h1>Your Tasks ...</h1>
+<div class="todos-wrapper">
+    
+    <div class="container">
+
+        <!-- add button for adding a new new -->
+        <div type="button" class="btn btn-dark btns">
+            <a routerLink="add" class="add-btn">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                Add
+            </a>
+        </div>
+        <!-- display all the todos present in the list -->
+        <app-todo-item *ngFor="let todo of todos"
+        [todo]="todo" 
+        (click)="Completed(todo)" 
+        (editClick)="onEditClick(todo)" 
+        (removeClick)="onRemoveClick(todo)"
+        @todoItemAnim> 
+        </app-todo-item>
+        
+        
+    </div>
+    
+</div>

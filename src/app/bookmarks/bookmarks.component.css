@@ -1,0 +1,44 @@
+.bookmark-wrapper{
+    height: 100%;
+    /* background-color: wheat; */
+    overflow-y: auto;
+}
+
+h1{
+    margin-top: -40px;
+    margin-left: 25px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.bookmark-tiles-container{
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.add-btn{
+    margin-right: 5px;
+    margin-left: -3px;
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns{
+    margin-left:441.5px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+

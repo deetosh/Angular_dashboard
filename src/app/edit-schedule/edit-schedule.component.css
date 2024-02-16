@@ -1,0 +1,14 @@
+.edit-schedule-wrapper{
+    border-radius:5px;
+    padding:35px;
+    margin:auto;
+
+    height: 420px;
+    overflow: auto;
+
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}

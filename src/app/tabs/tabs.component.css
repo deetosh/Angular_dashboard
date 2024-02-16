@@ -1,0 +1,88 @@
+.tabs{
+    display: flex;
+    border-radius: 12px;
+
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(20px);
+
+    padding: 10px;
+    gap:14px;
+    margin:12px;
+}
+
+.tab{
+    position: relative;
+    text-decoration: none;
+}
+
+.tab.selected .tab-tile{
+    transform: translateY(-20px);
+    transition-duration: 0.4s;
+    transition-timing-function:cubic-bezier(0, 0, 0, 1) ;
+}
+
+
+/* tab-tile before selecting */
+.tab-tile{
+    padding: 10px;
+    
+    display:flex;
+    cursor:pointer;
+    margin:auto;
+
+    border-radius: 10px;
+    transition: 0.4s cubic-bezier(0, 0, 0, 1);
+  
+}
+
+.tab-tile::before{
+    content:'';
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    z-index: -1;
+
+    height:100%;
+    width:100%;
+    opacity:0.5;
+    
+    border-radius: 10px;
+}
+
+.tab-tile:hover::before{
+    transform: scale(1.2);
+    transition: all 0.2s;
+    opacity:1;
+}
+
+.bookmark-tab .tab-tile::before{
+    background: linear-gradient(to right,rgb(236, 41, 165),rgb(21, 206, 175));
+}
+
+.todo-tab .tab-tile::before{
+    background: linear-gradient(to right,rgb(12, 92, 134),rgb(243, 182, 28));
+}
+
+.timetable .tab-tile::before{
+    background: linear-gradient(to right,rgb(205, 208, 35),rgb(10, 95, 69));
+}
+
+/* tab tile after selection  */
+.tab.selected .tab-tile::before{
+    border-radius: 50%;
+    transform: scale(1.2);
+    opacity:1;
+    box-shadow: 0px 20px 20px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgb(0, 0, 0) ;
+}
+
+/* ------------------------- */
+.material-symbols-outlined{
+    color: white;
+}
+.tab.selected .material-symbols-outlined{
+    transform: scale(1.2);
+    color: rgb(4, 18, 14);
+}
